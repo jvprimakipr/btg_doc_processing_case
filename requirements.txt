@@ -1,0 +1,13 @@
+python-dotenv
+pydantic
+pandas
+pytest
+
+pymupdf
+pytesseract
+langchain
+langchain-core
+langchain-openai
+langchain-anthropic
+langchain-google-genai
+langchain-groq
