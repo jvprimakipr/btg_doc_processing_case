@@ -1,0 +1,166 @@
+{
+  "document": "07_telecom_norte_jcp_SCAN.pdf",
+  "record": {
+    "record": {
+      "issuer": {
+        "value": "Telecom Norte Participações S.A.",
+        "status": "extracted",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source_type": "pytesseract",
+            "snippet": "TELECOM NORTE PARTICIPAÇÕES S.A.",
+            "confidence": 0.9
+          }
+        ],
+        "rationale": "Nome da companhia aparece no cabeçalho do documento."
+      },
+      "isin": {
+        "value": "BRTLNRACNPR2",
+        "status": "extracted",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source_type": "pytesseract",
+            "snippet": "ISIN BRTLNRACNPR2",
+            "confidence": 0.9
+          }
+        ],
+        "rationale": "Código ISIN identificado na linha de negociação."
+      },
+      "ticker": {
+        "value": "TLNR4",
+        "status": "extracted",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source_type": "pytesseract",
+            "snippet": "Código de negociação .......... TLNR4",
+            "confidence": 0.9
+          }
+        ],
+        "rationale": "Ticker presente na linha de negociação."
+      },
+      "event_type": {
+        "value": "JCP",
+        "status": "extracted",
+        "confidence": 0.9,
+        "evidence": [
+          {
+            "source_type": "pytesseract",
+            "snippet": "Tipo de evento... Juros sobre o Capital Próprio (JCP)",
+            "confidence": 0.9
+          }
+        ],
+        "rationale": "Evento classificado como Juros sobre o Capital Próprio."
+      },
+      "dates": {
+        "approval_date": {
+          "value": "06-06-2026",
+          "status": "extracted",
+          "confidence": 0.9,
+          "evidence": [
+            {
+              "source_type": "pytesseract",
+              "snippet": "reunião realizada em 06 de junho de 2026",
+              "confidence": 0.9
+            }
+          ],
+          "rationale": "Data da reunião do Conselho de Administração."
+        },
+        "record_date": {
+          "value": "22-06-2026",
+          "status": "extracted",
+          "confidence": 0.9,
+          "evidence": [
+            {
+              "source_type": "pytesseract",
+              "snippet": "Farão jus ao provento os acionistas inscritos nos registros da Companhia ao final do dia 22 de junho de 2026 (data com).",
+              "confidence": 0.9
+            }
+          ],
+          "rationale": "Data com (record date) indicada no texto."
+        },
+        "ex_date": {
+          "value": "23-06-2026",
+          "status": "extracted",
+          "confidence": 0.9,
+          "evidence": [
+            {
+              "source_type": "pytesseract",
+              "snippet": "As ações passarão a ser negociadas ex-JCP a partir de 23 de junho de 2026.",
+              "confidence": 0.9
+            }
+          ],
+          "rationale": "Data ex-JCP mencionada no documento."
+        },
+        "payment_date": {
+          "value": "21-08-2026",
+          "status": "extracted",
+          "confidence": 0.9,
+          "evidence": [
+            {
+              "source_type": "pytesseract",
+              "snippet": "Data de pagamento .. 21/08/2026",
+              "confidence": 0.9
+            }
+          ],
+          "rationale": "Data de pagamento indicada no texto."
+        }
+      },
+      "monetary_details": {
+        "gross_value": {
+          "value": "0,1124300000",
+          "status": "extracted",
+          "confidence": 0.9,
+          "evidence": [
+            {
+              "source_type": "pytesseract",
+              "snippet": "Valor bruto por ação PN ,,,.,,,;; R$ 0,1124300000",
+              "confidence": 0.9
+            }
+          ],
+          "rationale": "Valor bruto por ação informado."
+        },
+        "net_value": {
+          "value": "0,0927547500",
+          "status": "extracted",
+          "confidence": 0.9,
+          "evidence": [
+            {
+              "source_type": "pytesseract",
+              "snippet": "Valor líquido por ação PN ,,,,.. R$ 0,0927547500",
+              "confidence": 0.9
+            }
+          ],
+          "rationale": "Valor líquido por ação informado."
+        },
+        "proportion": {
+          "value": null,
+          "status": "not_applicable",
+          "confidence": null,
+          "evidence": [],
+          "rationale": "Proporção não se aplica a JCP."
+        },
+        "currency": {
+          "value": "BRL",
+          "status": "extracted",
+          "confidence": 0.9,
+          "evidence": [
+            {
+              "source_type": "pytesseract",
+              "snippet": "R$ 0,1124300000",
+              "confidence": 0.9
+            }
+          ],
+          "rationale": "Moeda indicada pelo símbolo R$."
+        }
+      },
+      "extraction_notes": [
+        "O documento foi processado via OCR; apesar de alguns caracteres estarem desalinhados, os valores e datas foram extraídos com alta confiança."
+      ],
+      "gr_validation": "not_validated"
+    },
+    "document_confidence": 0.9
+  }
+}

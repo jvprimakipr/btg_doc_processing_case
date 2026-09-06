@@ -90,7 +90,7 @@ def validate_dates(record: dict[str, Any]) -> dict[str, Any]:
         if not value:
             continue
         try:
-            parsed_dates[field_name] = datetime.strptime(str(value), "%Y-%m-%d")
+            parsed_dates[field_name] = datetime.strptime(str(value), "%d-%m-%Y")
         except ValueError:
             issues.append(f"invalid date format in {field_name}")
 
@@ -112,8 +112,8 @@ def validate_monetary_values(record: dict[str, Any]) -> dict[str, Any]:
     """Validate gross and net monetary values from a corporate action record."""
 
     issues = []
-    gross = _field_value(record, "mvalues", "gross_value")
-    net = _field_value(record, "mvalues", "net_value")
+    gross = _field_value(record, "monetary_details", "gross_value")
+    net = _field_value(record, "monetary_details", "net_value")
 
     if gross is not None and net is not None:
         try:
