@@ -1,166 +1,161 @@
 {
-  "document": "07_telecom_norte_jcp_SCAN.pdf",
-  "record": {
     "record": {
-      "issuer": {
-        "value": "Telecom Norte Participações S.A.",
-        "status": "extracted",
-        "confidence": 0.9,
-        "evidence": [
-          {
-            "source_type": "pytesseract",
-            "snippet": "TELECOM NORTE PARTICIPAÇÕES S.A.",
-            "confidence": 0.9
-          }
-        ],
-        "rationale": "Nome da companhia aparece no cabeçalho do documento."
-      },
-      "isin": {
-        "value": "BRTLNRACNPR2",
-        "status": "extracted",
-        "confidence": 0.9,
-        "evidence": [
-          {
-            "source_type": "pytesseract",
-            "snippet": "ISIN BRTLNRACNPR2",
-            "confidence": 0.9
-          }
-        ],
-        "rationale": "Código ISIN identificado na linha de negociação."
-      },
-      "ticker": {
-        "value": "TLNR4",
-        "status": "extracted",
-        "confidence": 0.9,
-        "evidence": [
-          {
-            "source_type": "pytesseract",
-            "snippet": "Código de negociação .......... TLNR4",
-            "confidence": 0.9
-          }
-        ],
-        "rationale": "Ticker presente na linha de negociação."
-      },
-      "event_type": {
-        "value": "JCP",
-        "status": "extracted",
-        "confidence": 0.9,
-        "evidence": [
-          {
-            "source_type": "pytesseract",
-            "snippet": "Tipo de evento... Juros sobre o Capital Próprio (JCP)",
-            "confidence": 0.9
-          }
-        ],
-        "rationale": "Evento classificado como Juros sobre o Capital Próprio."
-      },
-      "dates": {
-        "approval_date": {
-          "value": "06-06-2026",
-          "status": "extracted",
-          "confidence": 0.9,
-          "evidence": [
-            {
-              "source_type": "pytesseract",
-              "snippet": "reunião realizada em 06 de junho de 2026",
-              "confidence": 0.9
-            }
-          ],
-          "rationale": "Data da reunião do Conselho de Administração."
+        "issuer": {
+            "value": "Telecom Norte Participações S.A.",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pytesseract",
+                    "snippet": "TELECOM NORTE PARTICIPAÇÕES S.A.",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Nome da companhia encontrado no cabeçalho do documento. Validado no banco de dados."
         },
-        "record_date": {
-          "value": "22-06-2026",
-          "status": "extracted",
-          "confidence": 0.9,
-          "evidence": [
-            {
-              "source_type": "pytesseract",
-              "snippet": "Farão jus ao provento os acionistas inscritos nos registros da Companhia ao final do dia 22 de junho de 2026 (data com).",
-              "confidence": 0.9
-            }
-          ],
-          "rationale": "Data com (record date) indicada no texto."
+        "isin": {
+            "value": "BRTLNRACNPR2",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pytesseract",
+                    "snippet": "ISIN BRTLNRACNPR2",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Código ISIN identificado na linha de negociação. Validado no banco de dados."
         },
-        "ex_date": {
-          "value": "23-06-2026",
-          "status": "extracted",
-          "confidence": 0.9,
-          "evidence": [
-            {
-              "source_type": "pytesseract",
-              "snippet": "As ações passarão a ser negociadas ex-JCP a partir de 23 de junho de 2026.",
-              "confidence": 0.9
-            }
-          ],
-          "rationale": "Data ex-JCP mencionada no documento."
+        "ticker": {
+            "value": "TLNR4",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pytesseract",
+                    "snippet": "Código de negociação .......... TLNR4",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Ticker extraído da linha de negociação. Validado no banco de dados."
         },
-        "payment_date": {
-          "value": "21-08-2026",
-          "status": "extracted",
-          "confidence": 0.9,
-          "evidence": [
-            {
-              "source_type": "pytesseract",
-              "snippet": "Data de pagamento .. 21/08/2026",
-              "confidence": 0.9
-            }
-          ],
-          "rationale": "Data de pagamento indicada no texto."
-        }
-      },
-      "monetary_details": {
-        "gross_value": {
-          "value": "0,1124300000",
-          "status": "extracted",
-          "confidence": 0.9,
-          "evidence": [
-            {
-              "source_type": "pytesseract",
-              "snippet": "Valor bruto por ação PN ,,,.,,,;; R$ 0,1124300000",
-              "confidence": 0.9
-            }
-          ],
-          "rationale": "Valor bruto por ação informado."
+        "event_type": {
+            "value": "JCP",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pytesseract",
+                    "snippet": "Tipo de evento... Juros sobre o Capital Próprio (JCP)",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Tipo de evento identificado como Juros sobre o Capital Próprio."
         },
-        "net_value": {
-          "value": "0,0927547500",
-          "status": "extracted",
-          "confidence": 0.9,
-          "evidence": [
-            {
-              "source_type": "pytesseract",
-              "snippet": "Valor líquido por ação PN ,,,,.. R$ 0,0927547500",
-              "confidence": 0.9
+        "dates": {
+            "approval_date": {
+                "value": "06-06-2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pytesseract",
+                        "snippet": "Conselho de Administração, em reunião realizada em 06 de junho de 2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Data da reunião de aprovação."
+            },
+            "record_date": {
+                "value": "22-06-2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pytesseract",
+                        "snippet": "Farão jus ao provento os acionistas inscritos nos registros da Companhia ao final do dia 22 de junho de 2026 (data com)",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Data com identificada no texto."
+            },
+            "ex_date": {
+                "value": "23-06-2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pytesseract",
+                        "snippet": "As ações passarão a ser negociadas ex-JCP a partir de 23 de junho de 2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Data ex-JCP extraída do parágrafo sobre negociação."
+            },
+            "payment_date": {
+                "value": "21-08-2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pytesseract",
+                        "snippet": "Data de pagamento .. 21/08/2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Data de pagamento identificada na linha correspondente."
             }
-          ],
-          "rationale": "Valor líquido por ação informado."
         },
-        "proportion": {
-          "value": null,
-          "status": "not_applicable",
-          "confidence": null,
-          "evidence": [],
-          "rationale": "Proporção não se aplica a JCP."
-        },
-        "currency": {
-          "value": "BRL",
-          "status": "extracted",
-          "confidence": 0.9,
-          "evidence": [
-            {
-              "source_type": "pytesseract",
-              "snippet": "R$ 0,1124300000",
-              "confidence": 0.9
+        "monetary_details": {
+            "gross_value": {
+                "value": 0.11243,
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pytesseract",
+                        "snippet": "Valor bruto por ação PN ,,,.,,,;; R$ 0,1124300000",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Valor bruto por ação extraído do texto."
+            },
+            "net_value": {
+                "value": 0.09275475,
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pytesseract",
+                        "snippet": "Valor líquido por ação PN ,,,,.. R$ 0,0927547500",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Valor líquido por ação extraído do texto."
+            },
+            "proportion": {
+                "value": null,
+                "status": "not_applicable",
+                "confidence": null,
+                "evidence": [],
+                "rationale": "Proporção não se aplica a eventos de JCP."
+            },
+            "currency": {
+                "value": "BRL",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pytesseract",
+                        "snippet": "R$ 0,1124300000",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Moeda identificada como Real (R$)."
             }
-          ],
-          "rationale": "Moeda indicada pelo símbolo R$."
-        }
-      },
-      "extraction_notes": [
-        "O documento foi processado via OCR; apesar de alguns caracteres estarem desalinhados, os valores e datas foram extraídos com alta confiança."
-      ],
-      "gr_validation": "not_validated"
+        },
+        "extraction_notes": [],
+        "validation_notes": []
     },
-    "document_confidence": 0.9
-  }
+    "document_confidence": 1.0
 }

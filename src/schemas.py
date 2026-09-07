@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Literal, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 class Evidence(BaseModel):
@@ -71,6 +71,19 @@ EventType = Literal[
 class EventTypeField(ExtractedField):
     value: Optional[EventType] = None
 
+class MonetaryField(ExtractedField):
+    value: Optional[float] = None
+
+    @field_validator("value", mode="before")
+    @classmethod
+    def normalize_decimal_separator(cls, value: Any) -> Any:
+        if isinstance(value, str):
+            normalized = value.strip()
+            if "," in normalized:
+                normalized = normalized.replace(".", "").replace(",", ".")
+            return float(normalized)
+        return value
+
 class Dates(BaseModel):
     approval_date: ExtractedField = Field(
         default_factory=ExtractedField,
@@ -90,12 +103,12 @@ class Dates(BaseModel):
     )
 
 class MonetaryDetails(BaseModel):
-    gross_value: ExtractedField = Field(
-        default_factory=ExtractedField,
+    gross_value: MonetaryField = Field(
+        default_factory=MonetaryField,
         description="Gross monetary amount per share or unit."
     )
-    net_value: ExtractedField = Field(
-        default_factory=ExtractedField,
+    net_value: MonetaryField = Field(
+        default_factory=MonetaryField,
         description="Net monetary amount after applicable deductions."
     )
     proportion: ExtractedField = Field(
@@ -134,15 +147,11 @@ class CorporateAction(BaseModel):
     )
     extraction_notes: list[str] = Field(
         default_factory=list,
-        description="Additional notes about ambiguity, missing data or extraction limitations.",
+        description="All notes about ambiguity, missing data or extraction limitations.",
     )
-    gr_validation: Literal[
-        "not_validated",
-        "pass",
-        "failed",
-    ] = Field(
-        default="not_validated",
-        description="Validation status of the record against the golden reference data."
+    validation_notes: list[str] = Field(
+        default_factory=list,
+        description="All notes about validation issues, conflicts, or inconsistencies.",
     )
 
 class ExtractionResponse(BaseModel):
