@@ -1,0 +1,155 @@
+{
+    "record": {
+        "issuer": {
+            "value": "ENERGÉTICA VALE DO TIETÊ S.A.",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "ENERGÉTICA VALE DO TIETÊ S.A.",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Nome completo da companhia encontrado no cabeçalho. Validado no banco de dados."
+        },
+        "isin": {
+            "value": "BRTIETACNOR3",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "ISIN BRTIETACNOR3",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Código ISIN identificado na linha de negociação. Validado no banco de dados."
+        },
+        "ticker": {
+            "value": "TIET3",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "Código de negociação TIET3",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Ticker presente na linha de negociação. Validado no banco de dados."
+        },
+        "event_type": {
+            "value": "Dividendo",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "Tipo de evento Dividendo",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Tipo de evento declarado no documento."
+        },
+        "dates": {
+            "approval_date": {
+                "value": "28/05/2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Data de aprovação (RCA) 28/05/2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Data de aprovação extraída da linha correspondente."
+            },
+            "record_date": {
+                "value": "12/06/2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Data-base (\"data com\") 12/06/2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Data-base considerada como record date."
+            },
+            "ex_date": {
+                "value": "15/06/2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Data \"ex-dividendos\" 15/06/2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Data ex-dividendos extraída da linha correspondente."
+            },
+            "payment_date": {
+                "value": "03/07/2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Data de pagamento 03/07/2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Data de pagamento extraída da linha correspondente."
+            }
+        },
+        "monetary_details": {
+            "gross_value": {
+                "value": 0.4275,
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Valor bruto por ação ordinária (ON) R$ 0,4275000000",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Valor bruto por ação convertido para número decimal."
+            },
+            "net_value": {
+                "value": null,
+                "status": "not_found",
+                "confidence": null,
+                "evidence": [],
+                "rationale": "Valor líquido não informado no documento."
+            },
+            "proportion": {
+                "value": null,
+                "status": "not_found",
+                "confidence": null,
+                "evidence": [],
+                "rationale": "Proporção não aplicável a dividendos."
+            },
+            "currency": {
+                "value": "BRL",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "R$ 0,4275000000",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Moeda identificada pelo símbolo R$."
+            }
+        },
+        "extraction_notes": [],
+        "validation_notes": []
+    },
+    "document_confidence": 1.0
+}

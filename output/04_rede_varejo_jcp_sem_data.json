@@ -1,0 +1,157 @@
+{
+    "record": {
+        "issuer": {
+            "value": "Rede Varejo Brasil S.A.",
+            "status": "extracted",
+            "confidence": 0.98,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "REDE VAREJO BRASIL S.A.",
+                    "confidence": 0.98
+                }
+            ],
+            "rationale": "Nome da companhia encontrado no cabeçalho do documento. Validado no banco de dados."
+        },
+        "isin": {
+            "value": "BRRVBRACNOR9",
+            "status": "extracted",
+            "confidence": 0.97,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "ISIN BRRVBRACNOR9",
+                    "confidence": 0.97
+                }
+            ],
+            "rationale": "Código ISIN identificado na seção de negociação. Validado no banco de dados."
+        },
+        "ticker": {
+            "value": "RVBR3",
+            "status": "extracted",
+            "confidence": 0.97,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "Código de negociação RVBR3",
+                    "confidence": 0.97
+                }
+            ],
+            "rationale": "Ticker presente na seção de negociação. Validado no banco de dados."
+        },
+        "event_type": {
+            "value": "JCP",
+            "status": "extracted",
+            "confidence": 0.99,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "Tipo de evento Juros sobre o Capital Próprio (JCP)",
+                    "confidence": 0.99
+                }
+            ],
+            "rationale": "Tipo de evento explicitamente indicado."
+        },
+        "dates": {
+            "approval_date": {
+                "value": "09-06-2026",
+                "status": "extracted",
+                "confidence": 0.96,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "em reunião realizada em 09 de junho de 2026",
+                        "confidence": 0.96
+                    }
+                ],
+                "rationale": "Data da reunião de aprovação."
+            },
+            "record_date": {
+                "value": "23-06-2026",
+                "status": "extracted",
+                "confidence": 0.97,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "final do dia 23 de junho de 2026 (“data com”)",
+                        "confidence": 0.97
+                    }
+                ],
+                "rationale": "Data de registro do direito."
+            },
+            "ex_date": {
+                "value": "24-06-2026",
+                "status": "extracted",
+                "confidence": 0.97,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "a partir de 24 de junho de 2026",
+                        "confidence": 0.97
+                    }
+                ],
+                "rationale": "Data ex-JCP."
+            },
+            "payment_date": {
+                "value": null,
+                "status": "not_found",
+                "confidence": null,
+                "evidence": [],
+                "rationale": "Data de pagamento não especificada no documento."
+            }
+        },
+        "monetary_details": {
+            "gross_value": {
+                "value": 0.205,
+                "status": "extracted",
+                "confidence": 0.95,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Valor bruto por ação ON R$ 0,2050000000",
+                        "confidence": 0.95
+                    }
+                ],
+                "rationale": "Valor bruto por ação indicado."
+            },
+            "net_value": {
+                "value": 0.169125,
+                "status": "extracted",
+                "confidence": 0.95,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Valor líquido por ação ON R$ 0,1691250000",
+                        "confidence": 0.95
+                    }
+                ],
+                "rationale": "Valor líquido por ação indicado."
+            },
+            "proportion": {
+                "value": null,
+                "status": "not_applicable",
+                "confidence": null,
+                "evidence": [],
+                "rationale": "Proporção não se aplica a JCP."
+            },
+            "currency": {
+                "value": "BRL",
+                "status": "extracted",
+                "confidence": 0.99,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "R$",
+                        "confidence": 0.99
+                    }
+                ],
+                "rationale": "Moeda identificada pelo símbolo R$."
+            }
+        },
+        "extraction_notes": [
+            "Data de pagamento não definida no documento."
+        ],
+        "validation_notes": []
+    },
+    "document_confidence": 0.97
+}

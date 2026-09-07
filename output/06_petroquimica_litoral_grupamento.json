@@ -1,0 +1,134 @@
+{
+    "record": {
+        "issuer": {
+            "value": "PETROQUÍMICA LITORAL S.A.",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "PETROQUÍMICA LITORAL S.A.",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Nome da companhia encontrado no cabeçalho do documento. Validado no banco de dados."
+        },
+        "isin": {
+            "value": "BRPQLTACNOR8",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "Código de negociação PQLT3 (ISIN BRPQLTACNOR8)",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "ISIN extraído da linha de código de negociação. Validado no banco de dados."
+        },
+        "ticker": {
+            "value": "PQLT3",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "Código de negociação PQLT3 (ISIN BRPQLTACNOR8)",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Ticker extraído da linha de código de negociação. Validado no banco de dados."
+        },
+        "event_type": {
+            "value": "Grupamento",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "Tipo de evento Grupamento de ações (inplit)",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Tipo de evento identificado como grupamento."
+        },
+        "dates": {
+            "approval_date": {
+                "value": "30-05-2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Assembleia Geral Extraordinária realizada em 30 de maio de 2026 aprovou",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Data de aprovação encontrada na descrição da assembleia."
+            },
+            "record_date": {
+                "value": null,
+                "status": "not_found",
+                "confidence": null,
+                "evidence": [],
+                "rationale": "Data de registro não mencionada no documento."
+            },
+            "ex_date": {
+                "value": null,
+                "status": "not_found",
+                "confidence": null,
+                "evidence": [],
+                "rationale": "Data ex não especificada."
+            },
+            "payment_date": {
+                "value": null,
+                "status": "not_found",
+                "confidence": null,
+                "evidence": [],
+                "rationale": "Data de pagamento não indicada."
+            }
+        },
+        "monetary_details": {
+            "gross_value": {
+                "value": null,
+                "status": "not_found",
+                "confidence": null,
+                "evidence": [],
+                "rationale": "Nenhum valor monetário bruto informado."
+            },
+            "net_value": {
+                "value": null,
+                "status": "not_found",
+                "confidence": null,
+                "evidence": [],
+                "rationale": "Nenhum valor monetário líquido informado."
+            },
+            "proportion": {
+                "value": "10:1",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Proporção 10:1 (dez para uma)",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Proporção de grupamento extraída do texto."
+            },
+            "currency": {
+                "value": null,
+                "status": "not_found",
+                "confidence": null,
+                "evidence": [],
+                "rationale": "Moeda não mencionada."
+            }
+        },
+        "extraction_notes": [
+            "Data de registro (record_date) não encontrada no documento.",
+            "Data ex e data de pagamento não foram especificadas."
+        ],
+        "validation_notes": []
+    },
+    "document_confidence": 1.0
+}

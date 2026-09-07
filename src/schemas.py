@@ -46,7 +46,7 @@ class ExtractedField(BaseModel):
     )
     evidence: list[Evidence] = Field(
         default_factory=list,
-        description="One evidence item per distinct extraction source that supports the value."
+        description="Evidence items supporting the extracted value"
     )
     rationale: str = Field(
         default="",
@@ -147,11 +147,11 @@ class CorporateAction(BaseModel):
     )
     extraction_notes: list[str] = Field(
         default_factory=list,
-        description="All notes about ambiguity, missing data or extraction limitations.",
+        description="Notes only about ambiguity, missing data or extraction limitations.",
     )
     validation_notes: list[str] = Field(
         default_factory=list,
-        description="All notes about validation issues, conflicts, or inconsistencies.",
+        description="Notes only about validation issues, conflicts, or inconsistencies.",
     )
 
 class ExtractionResponse(BaseModel):

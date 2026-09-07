@@ -1,0 +1,159 @@
+{
+    "record": {
+        "issuer": {
+            "value": "CONSTRUTORA HORIZONTE S.A.",
+            "status": "validation_error",
+            "confidence": 0.3333333333333333,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "CONSTRUTORA HORIZONTE S.A.",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Nenhum valor correspondente encontrado no banco de dados."
+        },
+        "isin": {
+            "value": "BRCNHZACNOR5",
+            "status": "validation_error",
+            "confidence": 0.3333333333333333,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "ISIN BRCNHZACNOR5",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Nenhum valor correspondente encontrado no banco de dados."
+        },
+        "ticker": {
+            "value": "CNHZ3",
+            "status": "validation_error",
+            "confidence": 0.3333333333333333,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "Código de negociação CNHZ3",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Nenhum valor correspondente encontrado no banco de dados."
+        },
+        "event_type": {
+            "value": "Bonificação",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "Tipo de evento Bonificação em ações",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": ""
+        },
+        "dates": {
+            "approval_date": {
+                "value": "04/06/2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Assembleia Geral Extraordinária de 04 de junho de 2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": ""
+            },
+            "record_date": {
+                "value": "18/06/2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "data com 18 de junho de 2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": ""
+            },
+            "ex_date": {
+                "value": "19/06/2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "ex-bonificação a partir de 19 de junho de 2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": ""
+            },
+            "payment_date": {
+                "value": "26/06/2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Crédito das ações bonificadas 26/06/2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": ""
+            }
+        },
+        "monetary_details": {
+            "gross_value": {
+                "value": null,
+                "status": "not_applicable",
+                "confidence": null,
+                "evidence": [],
+                "rationale": ""
+            },
+            "net_value": {
+                "value": null,
+                "status": "not_applicable",
+                "confidence": null,
+                "evidence": [],
+                "rationale": ""
+            },
+            "proportion": {
+                "value": 0.05,
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Proporção 1 ação nova para cada 20 ações (5%)",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": ""
+            },
+            "currency": {
+                "value": "BRL",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Custo atribuído (base fiscal) R$ 7,820000 por ação",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": ""
+            }
+        },
+        "extraction_notes": [],
+        "validation_notes": [
+            "issuer: Nenhum valor correspondente encontrado no banco de dados.",
+            "isin: Nenhum valor correspondente encontrado no banco de dados.",
+            "ticker: Nenhum valor correspondente encontrado no banco de dados."
+        ]
+    },
+    "document_confidence": 0.8
+}

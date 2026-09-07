@@ -1,43 +1,43 @@
 {
     "record": {
         "issuer": {
-            "value": "Telecom Norte Participações S.A.",
+            "value": "Banco Meridional do Brasil S.A.",
             "status": "extracted",
             "confidence": 1.0,
             "evidence": [
                 {
-                    "source_type": "pytesseract",
-                    "snippet": "TELECOM NORTE PARTICIPAÇÕES S.A.",
+                    "source_type": "pymupdf",
+                    "snippet": "BANCO MERIDIONAL DO BRASIL S.A.",
                     "confidence": 1.0
                 }
             ],
-            "rationale": "Nome completo da companhia extraído diretamente do cabeçalho. Validado no banco de dados."
+            "rationale": "Validado no banco de dados."
         },
         "isin": {
-            "value": "BRTLNRACNPR2",
+            "value": "BRBMRDACNPR7",
             "status": "extracted",
             "confidence": 1.0,
             "evidence": [
                 {
-                    "source_type": "pytesseract",
-                    "snippet": "ISIN BRTLNRACNPR2",
+                    "source_type": "pymupdf",
+                    "snippet": "ISIN BRBMRDACNPR7",
                     "confidence": 1.0
                 }
             ],
-            "rationale": "Código ISIN identificado na linha de código de negociação. Validado no banco de dados."
+            "rationale": "Validado no banco de dados."
         },
         "ticker": {
-            "value": "TLNR4",
+            "value": "BMRD4",
             "status": "extracted",
             "confidence": 1.0,
             "evidence": [
                 {
-                    "source_type": "pytesseract",
-                    "snippet": "Código de negociação .......... TLNR4",
+                    "source_type": "pymupdf",
+                    "snippet": "Código de negociação BMRD4",
                     "confidence": 1.0
                 }
             ],
-            "rationale": "Ticker extraído da linha de código de negociação. Validado no banco de dados."
+            "rationale": "Validado no banco de dados."
         },
         "event_type": {
             "value": "JCP",
@@ -45,100 +45,100 @@
             "confidence": 1.0,
             "evidence": [
                 {
-                    "source_type": "pytesseract",
-                    "snippet": "Tipo de evento... Juros sobre o Capital Próprio (JCP)",
+                    "source_type": "pymupdf",
+                    "snippet": "Tipo de evento Juros sobre o Capital Próprio (JCP)",
                     "confidence": 1.0
                 }
             ],
-            "rationale": "Tipo de evento identificado como Juros sobre o Capital Próprio."
+            "rationale": ""
         },
         "dates": {
             "approval_date": {
-                "value": "06/06/2026",
+                "value": "02/06/2026",
                 "status": "extracted",
                 "confidence": 1.0,
                 "evidence": [
                     {
-                        "source_type": "pytesseract",
-                        "snippet": "em reunião realizada em 06 de junho de 2026",
+                        "source_type": "pymupdf",
+                        "snippet": "reunião realizada em 02 de junho de 2026",
                         "confidence": 1.0
                     }
                 ],
-                "rationale": "Data de aprovação extraída da frase sobre a reunião."
+                "rationale": ""
             },
             "record_date": {
-                "value": "22/06/2026",
+                "value": "16/06/2026",
                 "status": "extracted",
                 "confidence": 1.0,
                 "evidence": [
                     {
-                        "source_type": "pytesseract",
-                        "snippet": "Farão jus ao provento os acionistas inscritos nos registros da Companhia ao final do dia 22 de junho de 2026",
+                        "source_type": "pymupdf",
+                        "snippet": "final do dia 16 de junho de 2026",
                         "confidence": 1.0
                     }
                 ],
-                "rationale": "Data-base (data com) identificada na frase de registro."
+                "rationale": ""
             },
             "ex_date": {
-                "value": "23/06/2026",
+                "value": "17/06/2026",
                 "status": "extracted",
                 "confidence": 1.0,
                 "evidence": [
                     {
-                        "source_type": "pytesseract",
-                        "snippet": "as ações passarão a ser negociadas ex-JCP a partir de 23 de junho de 2026",
+                        "source_type": "pymupdf",
+                        "snippet": "ex-JCP a partir de 17 de junho de 2026",
                         "confidence": 1.0
                     }
                 ],
-                "rationale": "Data ex-JCP extraída da frase de negociação."
+                "rationale": ""
             },
             "payment_date": {
-                "value": "21/08/2026",
+                "value": "14/08/2026",
                 "status": "extracted",
                 "confidence": 1.0,
                 "evidence": [
                     {
-                        "source_type": "pytesseract",
-                        "snippet": "Data de pagamento .. 21/08/2026",
+                        "source_type": "pymupdf",
+                        "snippet": "Data de pagamento 14/08/2026",
                         "confidence": 1.0
                     }
                 ],
-                "rationale": "Data de pagamento identificada na linha correspondente."
+                "rationale": ""
             }
         },
         "monetary_details": {
             "gross_value": {
-                "value": 0.11243,
+                "value": 0.173842,
                 "status": "extracted",
                 "confidence": 1.0,
                 "evidence": [
                     {
-                        "source_type": "pytesseract",
-                        "snippet": "Valor bruto por ação PN ,,,.,,,;; R$ 0,1124300000",
+                        "source_type": "pymupdf",
+                        "snippet": "Valor bruto por ação preferencial (PN) R$ 0,1738420000",
                         "confidence": 1.0
                     }
                 ],
-                "rationale": "Valor bruto por ação extraído e convertido para número."
+                "rationale": ""
             },
             "net_value": {
-                "value": 0.09275475,
+                "value": 0.14341965,
                 "status": "extracted",
                 "confidence": 1.0,
                 "evidence": [
                     {
-                        "source_type": "pytesseract",
-                        "snippet": "Valor líquido por ação PN ,,,,.. R$ 0,0927547500",
+                        "source_type": "pymupdf",
+                        "snippet": "Valor líquido por ação (PN) R$ 0,1434196500",
                         "confidence": 1.0
                     }
                 ],
-                "rationale": "Valor líquido por ação extraído e convertido para número."
+                "rationale": ""
             },
             "proportion": {
                 "value": null,
-                "status": "not_applicable",
+                "status": "not_found",
                 "confidence": null,
                 "evidence": [],
-                "rationale": "Proporção não se aplica a eventos de JCP."
+                "rationale": ""
             },
             "currency": {
                 "value": "BRL",
@@ -146,12 +146,12 @@
                 "confidence": 1.0,
                 "evidence": [
                     {
-                        "source_type": "pytesseract",
+                        "source_type": "pymupdf",
                         "snippet": "R$",
                         "confidence": 1.0
                     }
                 ],
-                "rationale": "Moeda identificada pelo símbolo R$."
+                "rationale": ""
             }
         },
         "extraction_notes": [],

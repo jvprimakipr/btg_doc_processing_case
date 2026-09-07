@@ -93,6 +93,7 @@ def validate_dates(record: dict[str, Any]) -> dict[str, Any]:
     """Validate the chronological order of dates in a corporate action record."""
 
     date_fields = ("approval_date", "record_date", "ex_date", "payment_date")
+    date_formats = ("%d-%m-%Y", "%d/%m/%Y")
     parsed_dates: dict[str, datetime] = {}
     results = {
         "checks": {},
@@ -103,11 +104,20 @@ def validate_dates(record: dict[str, Any]) -> dict[str, Any]:
         value = _field_value(record, "dates", field_name)
         if not value:
             continue
-        try:
-            parsed_dates[field_name] = datetime.strptime(str(value), "%d-%m-%Y")
-        except ValueError:
+
+        parsed = None
+        for format in date_formats:
+            try:
+                parsed = datetime.strptime(value, format)
+                break
+            except ValueError:
+                continue
+
+        if parsed is None:
             results["checks"][field_name] = False
-            results["messages"][field_name] = f"Formato de data inválido."
+            results["messages"][field_name] = "Formato de data inválido."
+        else:
+            parsed_dates[field_name] = parsed
 
     for earlier, later in combinations(date_fields, 2):
         if (
@@ -224,3 +234,20 @@ def improve_response(response: dict[str, Any]) -> dict[str, Any]:
     _update_document_confidence(response)
 
     return response
+
+def get_exception_lines(document_name: str, response: dict) -> list[str]:
+    """Format extraction and validation notes for the exceptions report."""
+
+    lines = []
+    extraction_notes = response["record"].get("extraction_notes", [])
+    validation_notes = response["record"].get("validation_notes", [])
+
+    if extraction_notes:
+        lines.append(f"\n{document_name} | Problemas de Extração:")
+        lines.extend(f"  - {note}" for note in extraction_notes)
+
+    if validation_notes:
+        lines.append(f"\n{document_name} | Problemas de Validação:")
+        lines.extend(f"  - {note}" for note in validation_notes)
+
+    return lines

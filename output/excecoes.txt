@@ -1,1 +1,16 @@
-Nenhum problema encontrado.
+04_rede_varejo_jcp_sem_data.pdf | Problemas de Extração:
+  - Data de pagamento não definida no documento.
+
+05_aurora_saneamento_dividendo_datas.pdf | Problemas de Validação:
+  - record_date: Data 'com' deve ser anterior a Data de pagamento.
+  - payment_date: Data de pagamento deve ser posterior a Data 'ex'.
+  - ex_date: Data 'ex' deve ser anterior a Data de pagamento.
+
+06_petroquimica_litoral_grupamento.pdf | Problemas de Extração:
+  - Data de registro (record_date) não encontrada no documento.
+  - Data ex e data de pagamento não foram especificadas.
+
+08_construtora_horizonte_bonificacao.pdf | Problemas de Validação:
+  - issuer: Nenhum valor correspondente encontrado no banco de dados.
+  - isin: Nenhum valor correspondente encontrado no banco de dados.
+  - ticker: Nenhum valor correspondente encontrado no banco de dados.

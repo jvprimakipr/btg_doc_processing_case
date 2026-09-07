@@ -1,0 +1,159 @@
+{
+    "record": {
+        "issuer": {
+            "value": "AURORA SANEAMENTO S.A.",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "AURORA SANEAMENTO S.A.",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Nome da companhia encontrado no cabeçalho do documento. Validado no banco de dados."
+        },
+        "isin": {
+            "value": "BRAURSACNOR4",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "Código de negociação AURS3 (ISIN BRAURSACNOR4)",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "ISIN extraído da linha de código de negociação. Validado no banco de dados."
+        },
+        "ticker": {
+            "value": "AURS3",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "Código de negociação AURS3 (ISIN BRAURSACNOR4)",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Ticker extraído da linha de código de negociação. Validado no banco de dados."
+        },
+        "event_type": {
+            "value": "Dividendo",
+            "status": "extracted",
+            "confidence": 1.0,
+            "evidence": [
+                {
+                    "source_type": "pymupdf",
+                    "snippet": "Tipo de evento Dividendo intercalar",
+                    "confidence": 1.0
+                }
+            ],
+            "rationale": "Tipo de evento identificado como dividendos intercalares."
+        },
+        "dates": {
+            "approval_date": {
+                "value": "01-06-2026",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Data de aprovação (RCA) 01/06/2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Data de aprovação extraída."
+            },
+            "record_date": {
+                "value": "15-07-2026",
+                "status": "validation_error",
+                "confidence": 0.3333333333333333,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Data-base (“data com”) 15/07/2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Data-base (data com) extraída. Data 'com' deve ser anterior a Data de pagamento."
+            },
+            "ex_date": {
+                "value": "16-07-2026",
+                "status": "validation_error",
+                "confidence": 0.3333333333333333,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Data “ex-dividendos” 16/07/2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Data ex-dividendos extraída. Data 'ex' deve ser anterior a Data de pagamento."
+            },
+            "payment_date": {
+                "value": "10-07-2026",
+                "status": "validation_error",
+                "confidence": 0.3333333333333333,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Data de pagamento 10/07/2026",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Data de pagamento extraída. Data de pagamento deve ser posterior a Data 'ex'."
+            }
+        },
+        "monetary_details": {
+            "gross_value": {
+                "value": 0.31,
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Valor bruto por ação ON R$ 0,3100000000",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Valor bruto por ação extraído."
+            },
+            "net_value": {
+                "value": null,
+                "status": "not_found",
+                "confidence": null,
+                "evidence": [],
+                "rationale": "Valor líquido não informado no documento."
+            },
+            "proportion": {
+                "value": null,
+                "status": "not_found",
+                "confidence": null,
+                "evidence": [],
+                "rationale": "Proporção não aplicável a dividendos."
+            },
+            "currency": {
+                "value": "BRL",
+                "status": "extracted",
+                "confidence": 1.0,
+                "evidence": [
+                    {
+                        "source_type": "pymupdf",
+                        "snippet": "Valor bruto por ação ON R$ 0,3100000000",
+                        "confidence": 1.0
+                    }
+                ],
+                "rationale": "Moeda identificada como real brasileiro (R$)."
+            }
+        },
+        "extraction_notes": [],
+        "validation_notes": [
+            "record_date: Data 'com' deve ser anterior a Data de pagamento.",
+            "payment_date: Data de pagamento deve ser posterior a Data 'ex'.",
+            "ex_date: Data 'ex' deve ser anterior a Data de pagamento."
+        ]
+    },
+    "document_confidence": 0.8
+}
