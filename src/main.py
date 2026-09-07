@@ -64,7 +64,8 @@ def save_result(output_dir: Path, pdf_path: Path, result: dict) -> Path:
 def save_exceptions_report(output_dir: Path, exception_lines: list[str]) -> Path:
     """Save the accumulated extraction and validation exceptions."""
 
-    exception_lines[0] = exception_lines[0].lstrip("\n")
+    if len(exception_lines) > 0:
+        exception_lines[0] = exception_lines[0].lstrip("\n")
 
     exceptions_path = output_dir / "excecoes.txt"
     exceptions_path.write_text(
